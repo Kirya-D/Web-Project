@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="project.css">
+<html lang="en">
+    <head>
+        <title>Scheduler</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <div id="mainwrap">
+        <body>
+            <header>
+                <nav>
+                    <ul>
+                        <li><h1><a class="customLink" href="index.html">Home</a></h1></li>
+                        <li><h1><a class="customLink" href="calendar.html">Calendar</a></h1></li>
+                        <li><h1><a class="customLink" href="feedback.html">Feedback</a></h1></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                    <label>Rate your experience 1-5:</label>
+                    <input name="Rating" type="number" min="1" max="5" required></input>
+                    <label>Provide detailed feedback:</label>
+                    <textarea name="Feedback" required cols="20" rows="5"></textarea>
+                    <button type="submit" aria-rowindex="2">Send Feedback</button>
+                </form>
+            </main>
+        </body>
+        <footer>
+            Email: <a href="kdunca10@my.westga.edu">kdunca10@my.westga.edu</a>
+        </footer>
+    </div>
+</html>
