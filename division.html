@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="project.css">
+<html lang="en">
+    <head>
+        <title>Learning Math</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="navMenu">
+            <a class="nav" href="index.html">Home</a>
+            <a class="nav" href="addition.html">Addition</a>
+            <a class="nav" href="subtraction.html">Subtraction</a>
+            <a class="nav" href="multiplication.html">Multiplication</a>
+            <a class="nav" href="division.html">Division</a>
+        </div>
+        <div class="content">
+            <main>
+                <h1>What is Division?</h1>
+                <p id="summary">
+                    In math, division is a fundamental operation that involves splitting a quantity into equal parts or determining how many
+                    times one number is contained within another. It's the inverse of multiplication and is represented by the symbols "÷" or "/"
+                    and the result is called the <b>quotient</b>.
+                </p>
+                <h2>Examples</h2>
+                <h2>Practice</h2>
+                <div id="questions"></div>
+                <!-- Get randomized division questions -->
+                <script>
+                    let questionsDiv = document.getElementById("questions")
+                    for (let childIndex = 0; childIndex < 5; childIndex++) {
+                        let questionElement = document.createElement("div")
+                        let answerElement = document.createElement("button")
+                        questionsDiv.appendChild(questionElement)
+                        questionsDiv.appendChild(answerElement)
+
+                        let firstNum = Math.floor(Math.random() * 8 + 1)
+                        let secondNum = Math.floor(Math.random() * 8 + 1)
+                        questionElement.setHTMLUnsafe("Question " + (childIndex+1) + ": What is " + firstNum + " ÷ " + secondNum + "?")
+                        answerElement.setHTMLUnsafe("Show Answer")
+                        answerElement.onclick = answerElement.onclick = function(){
+                            answerElement.setHTMLUnsafe("Answer: " + (firstNum / secondNum))
+                        }
+                    }
+                </script>
+                <a href="index.html" id="entice">You understand the basics of math now!</a>
+            </main>
+            <footer>
+                Email: <a href="kdunca10@my.westga.edu">kdunca10@my.westga.edu</a>
+            </footer>
+        </div>
+    </body>
+</html>

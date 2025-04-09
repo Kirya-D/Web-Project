@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="project.css">
+<html lang="en">
+    <head>
+        <title>Learning Math</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="navMenu">
+            <a class="nav" href="index.html">Home</a>
+            <a class="nav" href="addition.html">Addition</a>
+            <a class="nav" href="subtraction.html">Subtraction</a>
+            <a class="nav" href="multiplication.html">Multiplication</a>
+            <a class="nav" href="division.html">Division</a>
+        </div>
+        <div class="content">
+            <main>
+                <h1>What is Addition?</h1>
+                <p id="summary">
+                    In math, addition is a fundamental operation that combines two or more numbers to find their total,
+                    represented by the plus "+" sign, and the result is called the <b>sum</b>.
+                </p>
+                <h2>Examples</h2>
+                <div id="gallery">
+                    <a href="images/additionExampleOne.png">
+                        <img class="thumb" src="images/additionExampleOne.png" alt="2 red squares with the number 1 above both visibly added together to equal 2">
+                        <span class="headshot">
+                            <img src="images/additionExampleOne.png" alt="2 red squares with the number 1 above both visibly added together to equal 2">
+                        </span>
+                    </a>
+                    <a href="images/additionExampleTwo.png">
+                        <img class="thumb"  src="images/additionExampleTwo.png" alt="3 red squares with the number 1 and 2 above both visibly added together to equal 3">
+                        <span class="headshot">
+                            <img src="images/additionExampleTwo.png" alt="3 red squares with the number 1 and 2 above both visibly added together to equal 3">
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <h2>Practice</h2>
+                    <div id="questions"></div>
+                    <a href="subtraction.html" id="entice">Next Lesson!</a>
+                </div>
+                <!-- Get randomized addition questions -->
+                <script>
+                    let questionsDiv = document.getElementById("questions")
+                    for (let childIndex = 0; childIndex < 5; childIndex++) {
+                        let questionElement = document.createElement("div")
+                        let answerElement = document.createElement("button")
+                        questionsDiv.appendChild(questionElement)
+                        questionsDiv.appendChild(answerElement)
+
+                        let firstNum = Math.floor(Math.random() * 8 + 1)
+                        let secondNum = Math.floor(Math.random() * 8 + 1)
+                        questionElement.setHTMLUnsafe("Question " + (childIndex+1) + ": What is " + firstNum + " + " + secondNum + "?")
+                        answerElement.setHTMLUnsafe("Show Answer")
+                        answerElement.onclick = answerElement.onclick = function(){
+                            answerElement.setHTMLUnsafe("Answer: " + (firstNum + secondNum))
+                        }
+                    }
+                </script>
+            </main>
+            <footer>
+                Email: <a href="kdunca10@my.westga.edu">kdunca10@my.westga.edu</a>
+            </footer>
+        </div>
+    </body>
+</html>
