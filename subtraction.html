@@ -2,18 +2,20 @@
 <link rel="stylesheet" href="project.css">
 <html lang="en">
     <head>
-        <title>Learning Math</title>
+        <title>Learning Subtraction</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <script src="questionGen.js"></script>
     </head>
     <body>
-        <div class="navMenu">
+        <nav>
             <a class="nav" href="index.html">Home</a>
             <a class="nav" href="addition.html">Addition</a>
             <a class="nav" href="subtraction.html">Subtraction</a>
             <a class="nav" href="multiplication.html">Multiplication</a>
             <a class="nav" href="division.html">Division</a>
-        </div>
+            <a class="nav" href="shop.html">Shop</a>
+        </nav>
         <div class="content">
             <main>
                 <h1>What is Subtraction?</h1>
@@ -25,25 +27,17 @@
                 <h2>Examples</h2>
                 <h2>Practice</h2>
                 <div id="questions"></div>
-                <a href="multiplication.html" id="entice">Next Lesson!</a>
-                <!-- Get randomized subtraction questions -->
                 <script>
-                    let questionsDiv = document.getElementById("questions")
-                    for (let childIndex = 0; childIndex < 5; childIndex++) {
-                        let questionElement = document.createElement("div")
-                        let answerElement = document.createElement("button")
-                        questionsDiv.appendChild(questionElement)
-                        questionsDiv.appendChild(answerElement)
-
-                        let firstNum = Math.floor(Math.random() * 8 + 1)
-                        let secondNum = Math.floor(Math.random() * 8 + 1)
-                        questionElement.setHTMLUnsafe("Question " + (childIndex+1) + ": What is " + firstNum + " - " + secondNum + "?")
-                        answerElement.setHTMLUnsafe("Show Answer")
-                        answerElement.onclick = answerElement.onclick = function(){
-                            answerElement.setHTMLUnsafe("Answer: " + (firstNum - secondNum))
-                        }
-                    }
+                    subtraction()
+                    subtraction()
+                    subtraction()
+                    subtraction()
+                    subtraction()
                 </script>
+                <div id="summary">
+                    <button onclick="subtraction()">Get New Question</button>
+                </div>
+                <a href="multiplication.html" id="entice">Next Lesson!</a>
             </main>
             <footer>
                 Email: <a href="kdunca10@my.westga.edu">kdunca10@my.westga.edu</a>
