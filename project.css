@@ -12,7 +12,7 @@ body {
     font-size: large;
 }
 
-.navMenu {
+nav {
     float: left;
     width: 20%;
     height: 100%;
@@ -106,8 +106,37 @@ footer {
     margin: auto;
 }
 
+#center {
+    text-align: center;
+    margin: auto;
+}
+
+#commerce {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#item {
+    align-self: center;
+    text-align: center;
+    display: block;
+    width: 40%;
+    margin: 2.5%;
+    padding: 0.5em;
+    border: solid 1px black;
+}
+
+#item img {
+    width: 100%;
+}
+
+#cart {
+    font-size: x-large;
+}
+
 @media screen and (max-width: 1500px) {
-    .navMenu {
+    nav {
         float: inline-start;
         width: 100%;
         height: auto;
@@ -126,30 +155,30 @@ footer {
 }
 
 @media screen and (max-width: 1100px) {
-    .navMenu {
+    nav {
         display: grid;
         width: 100%;
         height: auto;
     }
 
-    .navMenu :nth-child(1) {
+    nav :nth-child(1) {
         grid-column-start: 1;
         grid-column-end: span 2;
         grid-row: 1;
     }
-    .navMenu :nth-child(2) {
+    nav :nth-child(2) {
         grid-column: 1;
         grid-row: 2;
     }
-    .navMenu :nth-child(3) {
+    nav :nth-child(3) {
         grid-column: 1;
         grid-row: 3;
     }
-    .navMenu :nth-child(4) {
+    nav :nth-child(4) {
         grid-column: 2;
         grid-row: 2;
     }
-    .navMenu :nth-child(5) {
+    nav :nth-child(5) {
         grid-column: 2;
         grid-row: 3;
     }
@@ -161,7 +190,7 @@ footer {
 }
 
 @media screen and (max-width: 680px) {
-    .navMenu {
+    nav {
         display: flex;
         flex-direction: column;
     }
