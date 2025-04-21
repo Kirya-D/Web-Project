@@ -1,7 +1,7 @@
 # Web-Project
 Dedicated pages for learning and understanding the basic building blocks of math: Addition, subtraction, multiplication, and division.
 
-The hommepage (index) merely provides a brief description of each. These descriptions can also be found at the top of each corresponding page.
+The homepage (index) merely provides a brief description of each. These descriptions can also be found at the top of each corresponding page.
 At the bottom of the homepage is a link that brings you to the addition page, and each page has a similar link at the bottom leading to the next (addition to subtraction, subtraction to multiplating, and so on).
 
 Each arithmetic page has 5 relatively simple questions that are randomized when the page is loaded and each question has a button option to reveal the answer.
