@@ -12,6 +12,19 @@ body {
     font-size: large;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    padding-top: 2em;
+    text-align: center;
+}
+
 nav {
     float: left;
     width: 20%;
@@ -58,6 +71,17 @@ details {
     font-size: x-large;
 }
 
+table {
+    border: 1px solid black;
+    text-align: center;
+    padding: 1em;
+    table-layout: fixed;
+}
+
+td {
+    border: 1px solid black;
+}
+
 #gallery {
     width: 50%;
     margin-left: 25%;
@@ -80,10 +104,6 @@ details {
 
 #gallery a:hover .headshot {
     position:inherit;
-}
-
-footer {
-    margin: 0;
 }
 
 #summary {
@@ -193,5 +213,9 @@ footer {
     nav {
         display: flex;
         flex-direction: column;
+    }
+
+    table {
+        table-layout: auto;
     }
 }
