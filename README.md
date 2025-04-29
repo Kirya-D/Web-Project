@@ -7,8 +7,7 @@ At the bottom of the homepage is a link that brings you to the addition page, an
 Each arithmetic page has 5 relatively simple questions that are randomized when the page is loaded and each question has a button option to reveal the answer.
 In addition to this there is a button at the bottom of the question list allowing you to generate another question (with no limit to the number of questions)
 
+An additional page was made for leaving feedback such as a 1-5 rating and a description of your experience
+
 An additional folder named "images" is part of the project repository to reduce clutter of the main directory both in the repository and for my own workflow.
 As the name suggests it only holds images all of which are directly used in the project.
-
-Website doesn't currently implement HTML elements which should have been implemented in earlier assignments because I shifted my website idea a few weeks after we started working on our projects.
-Currently unimplemented HTML elements: Table, List, and Form
