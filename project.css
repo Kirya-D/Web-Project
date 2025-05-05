@@ -12,7 +12,6 @@ body {
     color: black;
     width: 90%;
     height: 100%;
-    margin-left: 5%;
     font-size: large;
 }
 
@@ -90,32 +89,39 @@ footer {
     padding-bottom: 2em;
 }
 
-#gallery {
-    width: 80%;
-    margin-left: 10%;
+.gallery {
+    margin-left: 30%;
+    margin-right: 30%;
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-auto-rows: auto;
-    row-gap: 10px;
-    place-items: start center;
+    grid-template-columns: repeat(2, 100px);
+    grid-auto-rows: 100px;
+    gap: 5px;
+    min-height: 250px;
 }
 
-#gallery img {
+#thumbnail img{
+    border: 1px solid black;
+    max-height: 100px;
+    opacity: 0.5;
+}
+
+#fullsize {
     max-width: 250px;
-    border: 1px black solid;
+    border: 2px dashed red;
+    opacity: 0;
+    position: absolute;
+    left: -5000px;
 }
 
-#gallery img:hover {
+#galleryImage:has(#thumbnail:hover) :is(#thumbnail img, #fullsize){
     opacity: 1;
 }
 
-#gallery img:not(:hover) {
-    position: inherit;
-    opacity: 0.25;
-    grid-row: auto;
-    grid-column: auto;
+#galleryImage:has(#thumbnail:hover) #fullsize{
+    position: absolute;
+    left: 60%;
+    top: 225px;
 }
-
 
 #summary {
     width: 80%;
@@ -192,6 +198,17 @@ footer {
         margin-left: 0%;
         border-left: black solid 2px;
     }
+
+    .gallery {
+        margin: 0;
+        justify-content: center;
+        min-height: 450px;
+    }
+
+    #galleryImage:has(#thumbnail:hover) #fullsize{
+        top: 525px;
+        left: 43%;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -199,7 +216,6 @@ footer {
         position: relative;
         display: grid;
         grid-template-columns: none;
-        grid-auto-rows: none;
         width: 100%;
         height: auto;
     }
@@ -231,6 +247,11 @@ footer {
         padding: 0;
         top: auto;
     }
+
+    #galleryImage:has(#thumbnail:hover) #fullsize{
+        top: 600px;
+        left: 39.5%;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -257,5 +278,10 @@ footer {
 
     #gallery img {
         max-width: 100px;
+    }
+
+    #galleryImage:has(#thumbnail:hover) #fullsize{
+        top: 725px;
+        left: 34%;
     }
 }
